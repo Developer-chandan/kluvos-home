@@ -133,7 +133,7 @@ button.next svg { width: 15px; }
 }
 .tab-content.active {
     display: flex;
-    gap: 60px;
+    gap: 67px;
 }
 .event_box_top {
     width: 323px;
@@ -141,6 +141,7 @@ button.next svg { width: 15px; }
     padding: 1.4rem;
     border-radius: 1rem;
     padding-bottom: 4rem;
+    height: 183px;
 }
 
 .title_and_icon {
@@ -151,7 +152,7 @@ button.next svg { width: 15px; }
 }
 
 span.check_icon svg {
-    width: 22px;
+    width: 24px;
     color: var(--primary);
 }
 
@@ -181,6 +182,7 @@ span.check_icon svg {
     display: flex;
     flex-direction: row;
     align-items: center;
+    position: relative;
 }
 
 .event_box_wrap {
@@ -218,4 +220,75 @@ span.check_icon svg {
 .user_info span ,
 .user_info p {
     font-size: 12px;
+}
+
+
+.right_arrow_sign svg {
+    width: 18px;
+    color: var(--primary);
+}
+
+
+.cross_arrow_sign,
+.right_arrow_sign {
+    width: 43px;
+    height: 24px;
+    border: 2px solid var(--primary);
+    display: grid;
+    place-items: center;
+    border-radius: 50px;
+    position: absolute;
+    right: -55px;
+    top: 81px;
+}
+.title_and_icon h4 span{
+color:red;
+text-transform: uppercase;
+}
+
+.event-box.red .cross_arrow_sign{
+    border-color: red;
+}
+
+.event-box.red .event_box_top{
+    border-color: red;
+}
+
+.event-box.red .cross_arrow_sign{
+    background: red;
+    position: absolute;
+    left: -55px;
+}
+
+.cross_arrow_sign svg{
+    width: 18px;
+    color: white;
+}
+.event-box.red .user_icon svg {
+    color: red;
+}
+.event-box.red .negative,
+.event-box.red span.check_icon svg {
+    color: red;
+}
+.event-box.red .day_pill span{
+  background: #001312;
+}
+
+.cookies_deleted p {
+    position: absolute;
+    top: -45px;
+    left: 50px;
+    color: red;
+    text-transform: capitalize;
+}
+
+.cookies_deleted span {
+    width: 50px;
+    height: 150px;
+    border: 2px dashed red;
+    display: block;
+    position: absolute;
+    top: -47px;
+    left: -50px;
 }
