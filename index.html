@@ -528,7 +528,7 @@
                 </div>
             </div>
         </section>
-        <section id="pricing" class="pricing">
+        <section id="exp_pricing" class="pricing">
             <div class="container">
                 <div class="pricing_wrap">
                     <div class="content_wrap">
@@ -553,7 +553,28 @@
                 </div>
             </div>
         </section>
- 
+        
+        <!-- pricing range  -->
+        <section class="range_pricing">
+            <div class="container">
+                <h1>Affordable Monthly Pricing</h1>
+                <p>No credit card. No commitment.<br>Following a 30 day free trial, monthly pricing is based off of annual revenue.</p>
+                
+                <div class="pricing-box">
+                    <p><strong>Annual Sales:</strong></p>
+                    <div class="slider-container">
+                        <div class="tooltip" id="tooltip">
+                            <span class="yearly-price" id="yearlyPrice">$210,000 / year</span>
+                            <span class="monthly-price" id="tooltipMonthlyPrice">Monthly Price: $199</span>
+                        </div>
+                        <input type="range" id="salesSlider" min="50000" max="1000000" step="10000" value="210000" oninput="updatePricing()">
+                    </div>
+                    <div class="price-box" id="monthlyPrice">Monthly Price: $199</div>
+                </div>
+                
+                <p class="footer-text">Kluvos will add a significant amount of revenue through email each month. <strong>We guarantee a 30% lift in both browse abandonment and cart abandonment flows.</strong></p>
+            </div>
+        </section>
 
 
 
@@ -611,6 +632,32 @@ function openTab(evt, tabName) {
 
 
 // events tabs  end
+
+
+// pricing range update 
+
+function updatePricing() {
+            let slider = document.getElementById("salesSlider");
+            let yearlyPrice = document.getElementById("yearlyPrice");
+            let tooltipMonthlyPrice = document.getElementById("tooltipMonthlyPrice");
+            let priceBox = document.getElementById("monthlyPrice");
+            
+            let salesValue = parseInt(slider.value).toLocaleString();
+            let monthlyPrice = Math.max(199, Math.round(slider.value / 1000));
+            
+            yearlyPrice.textContent = `$${salesValue} / year`;
+            tooltipMonthlyPrice.textContent = `Monthly Price: $${monthlyPrice}`;
+            priceBox.textContent = `Monthly Price: $${monthlyPrice}`;
+            
+            let percent = (slider.value - slider.min) / (slider.max - slider.min) * 100;
+            document.getElementById("tooltip").style.left = `calc(${percent}% - 50px)`;
+        }
+
+
+
+
+
+
     </script>
     
 </body>
