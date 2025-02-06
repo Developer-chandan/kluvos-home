@@ -214,10 +214,11 @@
                         <button class="tab-button active" onclick="openTab(event, 'without-kluvos')">WITHOUT KLUVOS</button>
                         <button class="tab-button" onclick="openTab(event, 'with-kluvos')">WITH KLUVOS</button>
                     </div>
-                    <!-- tab screen  -->
+                    <!-- tab screen without-kluvos -->
                     <div id="without-kluvos" class="tab-content active">
-                        <!-- event item  -->
-                        <div class="event-box">
+                       <div class="tab_content_wrap">
+                         <!-- event item  -->
+                         <div class="event-box">
                             <div class="event_box_wrap">
                                 <div class="event_box_top">
                                     <div class="title_and_icon">
@@ -354,16 +355,175 @@
                                   
                             </div>
                             <div class="cookies_deleted">
-                                <span></span>
+                                <span class="border_icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" width="16" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                                      </svg>
+                                </span>
                                 <p>cookies deleted</p>
                             </div>
                          
                         </div>
-                      
+                       </div>
+                       <div class="events_summery">
+                        <p class="total_event_pill">Total events from user: <span >5</span></p>
+                        <p class="sale_recovered">Sale Recovered: <span >no</span></p>
                     </div>
-                
+                    </div>
+                    <!-- tab screen with-kluvos -->
                     <div id="with-kluvos" class="tab-content">
-                        <p>Content for WITH KLUVOS (Insert additional details if necessary)</p>
+                        <div class="tab_content_wrap">
+                            <!-- event item  -->
+                            <div class="event-box">
+                               <div class="event_box_wrap">
+                                   <div class="event_box_top">
+                                       <div class="title_and_icon">
+                                          <h4>EVENTS SENT</h4>
+                                          <span class="check_icon">
+                                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                               <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                             </svg>
+                                          </span>
+                                        
+                                         
+                                       </div>
+                                       <ul>
+                                           <li>+ Active on site x1</li>
+                                           <li>+ Viewed product x1</li>
+                                       </ul>
+                                      </div>
+                                      <div class="event_box_botton">
+                                       <div class="info_wrap"> <div class="user_icon">
+                                           <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-person-add" viewBox="0 0 16 16">
+                                               <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
+                                               <path d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z"/>
+                                             </svg>
+                                       </div>
+                                       <div class="user_info">
+                                       
+                                           <p> <span>User:</span> jim@gmail.com</p>
+                                           <p> <span>Recognized:</span> Yes!</p>
+                                           <p> <span>Events to Klaviyo:</span> Yes!</p>
+                                       
+                                       </div> </div>
+                                      
+                                       <div class="day_pill">
+                                           <span>Day 1</span>
+                                       </div>
+                                      </div>
+                               </div>
+                               <div class="right_arrow_sign">
+                                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" width="16" stroke="currentColor" class="size-6">
+                                       <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                                     </svg>
+                                     
+                               </div>
+                            
+                           </div>
+                           <!-- event item  -->
+                           <div class="event-box">
+                               <div class="event_box_wrap">
+                                   <div class="event_box_top">
+                                       <div class="title_and_icon">
+                                          <h4>EVENTS SENT</h4>
+                                          <span class="check_icon">
+                                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                               <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                             </svg>
+                                          </span>
+                                        
+                                         
+                                       </div>
+                                       <ul>
+                                           <li>+ Active on site x1</li>
+                                           <li>+ Viewed product x2</li>
+                                       </ul>
+                                      </div>
+                                      <div class="event_box_botton">
+                                       <div class="info_wrap"> <div class="user_icon">
+                                           <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-person-add" viewBox="0 0 16 16">
+                                               <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
+                                               <path d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z"/>
+                                             </svg>
+                                       </div>
+                                       <div class="user_info">
+                                       
+                                           <p> <span>User:</span> jim@gmail.com</p>
+                                           <p> <span>Recognized:</span> Yes!</p>
+                                           <p> <span>Events to Klaviyo:</span> Yes!</p>
+                                       
+                                       </div> </div>
+                                      
+                                       <div class="day_pill">
+                                           <span>Day 3</span>
+                                       </div>
+                                      </div>
+                               </div>
+                            
+                           </div>
+                           <!-- event item  -->
+                           <div class="event-box red green">
+                               <div class="event_box_wrap">
+                                   <div class="event_box_top">
+                                       <div class="title_and_icon">
+                                          <h4>EVENTS SENT</h4>
+                                          <span class="check_icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                              </svg>
+                                           </span>
+                                        
+                                         
+                                       </div>
+                                       <ul>
+                                           <li>+ Active on site x1</li>
+                                           <li>+ Viewed product x1</li>
+                                           <li>+ Added to cart x1</li>
+                                       </ul>
+                                      </div>
+                                      <div class="event_box_botton">
+                                       <div class="info_wrap"> <div class="user_icon">
+                                           <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-person-add" viewBox="0 0 16 16">
+                                               <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
+                                               <path d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z"/>
+                                             </svg>
+                                       </div>
+                                       <div class="user_info">
+                                       
+                                           <p> <span>User:</span> jim@gmail.com</p>
+                                           <p class=""> <span >Recognized:</span> No!</p>
+                                           <p class=""> <span>Events to Klaviyo:</span> No!</p>
+                                       
+                                       </div> </div>
+                                      
+                                       <div class="day_pill">
+                                           <span>Day 7</span>
+                                       </div>
+                                      </div>
+                               </div>
+                               <div class="cross_arrow_sign">
+                                   
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" width="16" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                                  </svg>
+                                     
+                                     
+                               </div>
+                               <div class="cookies_deleted">
+                                   <span class="border_icon">
+                                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" width="16" stroke="currentColor" class="size-6">
+                                           <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                                         </svg>
+                                   </span>
+                                   <p>Cookies Retained</p>
+                               </div>
+                            
+                           </div>
+                          </div>
+                          <div class="events_summery green">
+                            <p class="total_event_pill">Total events from user: <span >5</span></p>
+                            <p class="sale_recovered">Sale Recovered: <span >yes</span></p>
+                         
                     </div>
                 </div>
             </div>
