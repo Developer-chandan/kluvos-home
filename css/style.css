@@ -103,7 +103,7 @@ button {
 }
 
 .container {
-    max-width: 1280px;
+    max-width: 1140px;
     margin: 0px auto;
 }
 
@@ -449,6 +449,12 @@ button.next svg {
     width: 450px;
 }
 
+section#un_truth {
+    margin-top: -6rem;
+    background: white;
+    padding: 5rem 0;
+}
+
 .un_truth_header {
     max-width: 600px;
     text-align: center;
@@ -782,4 +788,92 @@ p.sale_recovered span {
 
 .events_summery.green p.sale_recovered span {
     color: var(--primary);
+}
+
+
+
+.pricing .container {
+    background-color: var(--secondary);
+    color: white;
+    padding: 4rem;
+    border-radius: 10px;
+    position: relative;
+}
+
+.pricing .pricing_wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.pricing .content_wrap {
+    width: 44%;
+}
+.pricing .container h4 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 1.5rem 0;
+    color: var(--text);
+}
+.pricing .container p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+.pricing .highlight {
+    color: #5ecc8a;
+    /* font-weight: bold; */
+}
+.pricing .cta-button {
+    display: inline-block;
+    background-color: #5ecc8a;
+    color: white;
+    padding: 12px 33px;
+    border-radius: 50px;
+    font-size: 1em;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 4rem;
+}
+.pricing .card {
+    background-color: white;
+    color: black;
+    padding: 2rem 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 45%;
+    /* padding-right: 4rem; */
+    box-shadow: 11px 11px 0 0px var(--primary);
+}
+.pricing .card h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.pricing .card p {
+    font-size: 1em;
+    /* padding-right: 2rem; */
+}
+.pricing .card .green-text {
+    color: #5ecc8a;
+    /* font-weight: bold; */
+}
+.pricing_wrap .card p {
+    display: inline;
+}
+
+.pricing_wrap .content_wrap p {
+    color: #b0b0b0;
+}
+
+.pricing_wrap .content_wrap h2 {
+    margin-bottom: 1.5rem;
+}
+.pricing_wrap .card_text {
+    /* padding-right: 1rem; */
+}
+section#pricing {
+    margin-bottom: 5rem;
+}
+
+.pricing_wrap .pricing_details p{
+ display: inline;
 }
