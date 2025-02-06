@@ -36,6 +36,7 @@ h2, h3 {
 
 h2 {
     font-size: 40px;
+    /* color: var(--text); */
 }
 
 body {
@@ -80,6 +81,9 @@ button {
 
 .btn:hover {
     background-color: rgb(69, 132, 89);
+}
+.menu_links ul li a {
+    color: white;
 }
 
 .landing_page_header {
@@ -880,57 +884,148 @@ section#pricing {
 
 
 .range_pricing .container {
-    max-width: 600px;
+    max-width: 820px;
     margin: auto;
 }
 .range_pricing .pricing-box {
-    background: white;
-    padding: 20px;
+    background: #ffffff00;
+    /* padding: 4rem; */
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
     margin-top: 20px;
+    border: 1px solid #ddd;
 }
 .range_pricing .slider-container {
     position: relative;
-    margin: 19px 0;
-    height: 159px;
+    /* margin: 19px 0; */
+    height: 167px;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    padding-top: 1rem;
 }
 .range_pricing input[type=range] {
     width: 100%;
+    margin: auto;
+    display: inline-block;
+    /* display: block; */
 }
 .range_pricing .tooltip {
     position: absolute;
-    top: 17px;
-    left: 50%;
+    top: 47px;
+    left: 17px;
     transform: translateX(-50%);
     background: white;
-    padding: 10px;
+    /* padding: 10px; */
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
     font-weight: bold;
     display: flex;
     flex-direction: column;
     align-items: center;
     z-index: 999;
     background: white;
+    border: 1px solid var(--primary);
 }
 .range_pricing .yearly-price {
-    background: #e5f8e5;
-    padding: 5px;
+    /* background: #e5f8e5; */
+    /* padding: 7px; */
+    padding-top: 5px;
     border-radius: 5px;
-    font-weight: bold;
+    /* font-weight: bold; */
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 400;
 }
 .range_pricing .monthly-price {
-    background: #d8f9d8;
-    padding: 5px;
+    background: #deffe8;
+    padding: 5px 30px;
     border-radius: 5px;
-    font-weight: bold;
+    font-weight: 400;
     margin-top: 5px;
 }
 .range_pricing .footer-text {
     margin-top: 20px;
     font-size: 14px;
+    text-align: center;
 }
 .range_pricing .footer-text strong {
-    font-weight: bold;
+    font-weight: 500;
+}
+
+
+.range_title{
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.pricing-box p {
+    padding-left: 4rem;
+    padding-top: 4rem;
+}
+
+#tooltipMonthlyPrice strong{
+    color: var(--primary);
+    font-weight: 500;
+}
+
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    background: var(--primary);
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.9;
+    transition: all .6s;
+    position: relative;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    height: 8px;
+    background: linear-gradient(to right, var(--text) 0%, var(--text) var(--progress), var(--primary) var(--progress), var(--primary) 100%);
+    border-radius: 5px;
+}
+input[type=range]::-moz-range-track {
+    height: 8px;
+    background: linear-gradient(to right, var(--text) 0%, var(--text) var(--progress), var(--primary) var(--progress), var(--primary) 100%);
+    border-radius: 5px;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: green;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -6px;
+}
+input[type=range]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: green;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+section#exp_pricing {
+    background: #f8fcf9;
+}
+
+section.range_pricing {
+    background: #f8fcf9;
+    padding: 5rem 0;
+}
+
+.range_title h2 {
+    margin-bottom: 1.5rem;
+}
+
+.range_input_wrapper{
+    padding: 5px 15px;
+    background:white;
+    width: 80%;
+    margin: auto;
 }

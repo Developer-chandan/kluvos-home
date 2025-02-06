@@ -557,19 +557,26 @@
         <!-- pricing range  -->
         <section class="range_pricing">
             <div class="container">
-                <h1>Affordable Monthly Pricing</h1>
+               <div class="range_title">
+                <h2>Affordable Monthly Pricing</h2>
                 <p>No credit card. No commitment.<br>Following a 30 day free trial, monthly pricing is based off of annual revenue.</p>
+               </div>
                 
                 <div class="pricing-box">
-                    <p><strong>Annual Sales:</strong></p>
-                    <div class="slider-container">
-                        <div class="tooltip" id="tooltip">
-                            <span class="yearly-price" id="yearlyPrice">$210,000 / year</span>
-                            <span class="monthly-price" id="tooltipMonthlyPrice">Monthly Price: $199</span>
+                    <p>Annual Sales:</p>
+                    <div class="range_box_wrap">
+                        <div class="slider-container">
+                            <div class="tooltip" id="tooltip">
+                                <span class="yearly-price" id="yearlyPrice">$210,000 / year</span>
+                                <span class="monthly-price" id="tooltipMonthlyPrice">Monthly Price: <strong> $199</strong> </span>
+                            </div>
+                           <div class="range_input_wrapper">
+                            <input type="range" id="salesSlider" min="50000" max="1000000" step="10000" value="210000" oninput="updatePricing()">
+                           </div>
                         </div>
-                        <input type="range" id="salesSlider" min="50000" max="1000000" step="10000" value="210000" oninput="updatePricing()">
                     </div>
-                    <div class="price-box" id="monthlyPrice">Monthly Price: $199</div>
+                 
+                   
                 </div>
                 
                 <p class="footer-text">Kluvos will add a significant amount of revenue through email each month. <strong>We guarantee a 30% lift in both browse abandonment and cart abandonment flows.</strong></p>
@@ -647,10 +654,11 @@ function updatePricing() {
             
             yearlyPrice.textContent = `$${salesValue} / year`;
             tooltipMonthlyPrice.textContent = `Monthly Price: $${monthlyPrice}`;
-            priceBox.textContent = `Monthly Price: $${monthlyPrice}`;
+          //  priceBox.textContent = `Monthly Price: $${monthlyPrice}`;
             
-            let percent = (slider.value - slider.min) / (slider.max - slider.min) * 100;
-            document.getElementById("tooltip").style.left = `calc(${percent}% - 50px)`;
+          let percent = (slider.value - slider.min) / (slider.max - slider.min) * 100;
+            document.getElementById("tooltip").style.left = `calc(${percent}% - 20px)`;
+            slider.style.setProperty("--progress", `${percent}%`);
         }
 
 
