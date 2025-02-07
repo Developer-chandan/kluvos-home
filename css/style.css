@@ -8,6 +8,7 @@
     --primary: #6dbf87;
     --secondary: #001312;
     --text: #444444;
+    --light-bg: rgb(248, 252, 249);
 }
 
 @font-face {
@@ -946,8 +947,8 @@ section#pricing {
     margin-top: 5px;
 }
 .range_pricing .footer-text {
-    margin-top: 20px;
-    font-size: 14px;
+    margin-top: 3rem;
+    /* font-size: 14px; */
     text-align: center;
 }
 .range_pricing .footer-text strong {
@@ -1028,4 +1029,172 @@ section.range_pricing {
     background:white;
     width: 80%;
     margin: auto;
+}
+
+.freeTrialWrap {
+    text-align: center;
+    background: url(../img/Kluvos-icon-dark.png);
+    background-repeat: no-repeat;
+    padding: 6rem 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.freeTrialWrap span {
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: white;
+}
+
+.freeTrialWrap h2 {
+    font-family: 'GT-super-dsiplay-bold';
+    font-size: 3rem;
+    margin: 1.6rem 0;
+    color: var(--text);
+}
+
+.freeTrialWrap button a {
+    display: inline-block;
+    background: var(--text);
+    color: white;
+    padding: .8rem 2rem;
+    border-radius: 50px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+section#startFreeTrial {
+    /* padding: 6rem 0; */
+    background: var(--primary);
+}
+
+.freeTrialWrap p {
+    color: white;
+    margin-bottom: 2rem;
+}
+
+
+/* faq  */
+.faq-container {
+    max-width: 800px;
+    margin: auto;
+    border-top: 1px solid #ddd;
+}
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+.faq-question {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px;
+}
+.faq-icon {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.faq-answer {
+    display: none;
+    padding: 10px;
+    color: #333;
+}
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+
+.faq_wrap {
+    display: flex;
+    padding: 5rem 0;
+}
+
+.faq_title_icon {
+    width: 37%;
+}
+
+.faq_accordion {
+    width: 63%;
+}
+
+.faq_title_icon h2 {
+    padding-bottom: 3rem;
+    padding-right: 1rem;
+}
+
+.faq_img img{
+    width: 315px;
+}
+
+path.path_border {
+    fill: var(--primary);
+}
+
+svg.minus-icon {
+    background: var(--primary);
+}
+
+path.whitePath{
+    fill: white;
+}
+
+svg.plus-icon {
+    background: var(--text);
+}
+
+
+
+.plus-icon .blackBorderPath{
+    fill: var(--text);
+}
+.plus-icon .whiteBorderPath{
+    fill: white;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.user_menu ul li a {
+    color: white;
+}
+
+#promotions{
+    background: var(--light-bg);
+}
+.promotion_wrap {
+    padding: 5rem 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.promotion_wrap h4 {
+    font-size: 5rem;
+    /* vertical-align: super; */
+    color: var(--primary);
+    font-weight: 400;
+}
+
+.promotion_wrap h4 sup {
+    vertical-align: super;
+    /* margin-left: -28px; */
+    font-size: 3.5rem;
+    text-transform: uppercase;
+}
+
+.promotion_content_box {
+    max-width: 33.33%;
+}
+
+.promotion_content_box p {
+    max-width: 250px;
+    margin: 0 auto;
+    text-align: center;
 }
