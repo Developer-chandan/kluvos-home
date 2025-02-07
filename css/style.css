@@ -916,7 +916,7 @@ section#pricing {
     position: absolute;
     top: 47px;
     left: 17px;
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
     background: white;
     /* padding: 10px; */
     border-radius: 5px;
