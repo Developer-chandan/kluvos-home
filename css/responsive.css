@@ -1,0 +1,59 @@
+@media (max-width: 668px){
+    a, p, button, span, ul, li{
+        font-size: .8rem;
+    }
+    .app_showcase_left {
+        max-width: 96%;
+    }
+    .app_showcase {
+ 
+flex-direction: column;
+ 
+padding: 2rem 0;
+ 
+text-align: center;
+ 
+}
+    .app_showcase_left h5{
+        font-size: .8rem;
+    }
+    .app_showcase_left h1{
+        font-size: 32px;
+    }
+    .app_showcase_left p {
+        max-width: 70%;
+        margin: auto;
+        padding-bottom: 1.5rem;
+    }
+
+    .app_showcase_right {
+        max-width: 98%;
+        display: flex;
+    
+        justify-content: flex-start;
+    }
+    .landing_page_nav_wrap {
+     
+        display: none;
+    }
+
+    .slider_wrapper,
+    .testimonial,
+    .features,
+    #un_truth,
+    .pricing,
+    .range_pricing,
+    #startFreeTrial,
+    #faq,
+    #promotions,
+    #footer{
+        display: none;
+    }
+
+
+
+
+
+
+
+}

@@ -8,7 +8,7 @@
     --primary: #6dbf87;
     --secondary: #001312;
     --text: #444444;
-    --light-bg: rgb(248, 252, 249);
+    --light-bg: #f4fdf7;
 }
 
 @font-face {
@@ -936,15 +936,16 @@ section#pricing {
     border-radius: 5px;
     /* font-weight: bold; */
     color: var(--primary);
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 400;
 }
 .range_pricing .monthly-price {
     background: #deffe8;
-    padding: 5px 30px;
+    padding: 5px 15px;
     border-radius: 5px;
     font-weight: 400;
     margin-top: 5px;
+    font-size: 14px;
 }
 .range_pricing .footer-text {
     margin-top: 3rem;
@@ -1172,11 +1173,11 @@ svg.plus-icon {
     padding: 5rem 0;
     text-align: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .promotion_wrap h4 {
-    font-size: 5rem;
+    font-size: 4.5rem;
     /* vertical-align: super; */
     color: var(--primary);
     font-weight: 400;
@@ -1185,7 +1186,7 @@ svg.plus-icon {
 .promotion_wrap h4 sup {
     vertical-align: super;
     /* margin-left: -28px; */
-    font-size: 3.5rem;
+    font-size: 3rem;
     text-transform: uppercase;
 }
 
@@ -1197,4 +1198,111 @@ svg.plus-icon {
     max-width: 250px;
     margin: 0 auto;
     text-align: center;
+}
+.footer_bg_container{
+    max-width: 1600px;
+    margin: auto;
+}
+
+.footer-wrap {display: grid;grid-template-columns: 3fr 1fr 1fr 1fr;gap: 15px;}
+
+footer#footer {
+    background: var(--secondary);
+    color: white;
+}
+
+.footer-wrap > div {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    padding-top: 7rem;
+    padding-bottom: 4rem;
+}
+
+/* .marketing_info{
+    background: url("../img/Kluvos-icon.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+} */
+
+.marketing_info p {
+    color: #cccccc;
+    max-width: 411px;
+}
+
+.footer_logo img {
+    max-width: 256px;
+}
+
+.footer-wrap{
+    max-width: 1140px;
+    margin:  auto;
+}
+
+.footer_bg_container{
+    max-width: 1600px;
+    background: url("../img/Kluvos-icon.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 550px;
+}
+
+#footer .trial_button button {
+    background: var(--primary);
+    color: white;
+    padding: .8rem 2rem;
+    border-radius: 50px;
+    text-transform: capitalize;
+}
+
+ul.social_links {
+    display: flex;
+    gap: 10px;
+}
+
+ul.social_links li a {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    background: white;
+    border: 2px solid var(--primary);
+    border-radius: 50px;
+}
+.footer_menu_links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer_menu_links ul li a {
+    color: white;
+    font-size: .8rem;
+}
+
+.footer_menu_links h5 {color: #cccccc;text-transform: uppercase;font-weight: 500;letter-spacing: 1px;font-size: 1rem;}
+
+.marketing_info {
+    padding-right: 3rem;
+}
+
+.copyright{
+    max-width: 1140px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    padding-bottom: 5rem;
+}
+
+.copyright * {
+    color: #cccccc;
+    font-size: .8rem;
+}
+
+@media (max-width: 1140px) {
+    .landing_page_header{
+        height: 800px;
+
+    }
 }
