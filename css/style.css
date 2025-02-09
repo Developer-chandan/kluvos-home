@@ -1300,6 +1300,13 @@ ul.social_links li a {
     font-size: .8rem;
 }
 
+
+.copyright_repeat{
+    display: none;
+}
+.copyright_repeat.footer_menu_links {
+    display: none;
+}
 @media (max-width: 1140px) {
     .landing_page_header{
         height: 800px;

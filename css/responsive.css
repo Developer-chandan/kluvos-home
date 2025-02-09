@@ -36,18 +36,7 @@ text-align: center;
     }
 
   
-   
-
-  
-    
-    .range_pricing,
-    #startFreeTrial,
-    #faq,
-    #promotions,
-    #footer{
-        display: none;
-    }
-
+ 
 
     .landing_page_header{
         height: 100vh;
@@ -120,6 +109,75 @@ p.sale_recovered span {
 p.total_event_pill span {
  
     margin-left: 6px;
+}
+.pricing .container p {
+    font-size: 11px;
+    line-height: 15px;
+}
+
+.pricing .cta-button {
+ 
+    padding: 8px 26px;
+    font-size: 12px;
+   
+}
+
+.pricing .container h4 {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    margin-top: 0;
+}
+section.range_pricing {
+    padding: 4rem 1rem;
+}
+
+.range_pricing .pricing-box{
+    border: none;
+    margin-top: 0;
+}
+
+
+.range_title {
+    margin-bottom: 0.5rem;
+}
+.range_pricing .footer-text {
+    margin-top: 0rem;
+}
+.freeTrialWrap h2 {
+    font-size: 1.6rem;
+    margin: 1rem 0;
+}
+
+.freeTrialWrap {
+    text-align: center;
+    background: url(../img/Kluvos-icon-dark.png);
+    background-repeat: no-repeat;
+    padding: 4rem 0;
+    background-size: 537px;
+    background-position: center bottom;
+}
+.promotion_wrap h4 sup {
+    font-size: 2rem;
+}
+.promotion_wrap h4 {
+    font-size: 3.5rem;
+ 
+}
+.promotion_wrap {
+    padding: 4rem 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.promotion_content_box {
+    max-width: 48.33%;
+    padding: 1rem;
+}
+
+.promotion_content_box p {
+
+    font-size: .9rem;
 }
 
 }
@@ -347,9 +405,13 @@ padding: .8rem 1rem 4rem;
     }
 
     .pricing .card {
-        padding: 1rem 1.5rem;
+        padding: 1.5rem 1.5rem;
         width: 100%;
-       
+        display: flex;
+        gap: 20px;
+    }
+    .pricing .card img{
+        width: 30px;
     }
 
     .pricing .cta-button {
@@ -359,4 +421,84 @@ padding: .8rem 1rem 4rem;
     .pricing_wrap .content_wrap h2 {
         margin-bottom: 1rem;
     }
+
+    .faq_wrap {
+        display: flex;
+        padding: 5rem 1rem;
+        flex-direction: column;
+    }
+    .faq_img img {
+        display: none;
+    }
+    .faq_accordion {
+        width: 100%;
+    }
+    .faq_title_icon {
+        width: 100%;
+    }
+    .faq_title_icon h2 {
+        padding-bottom: 2rem;
+    }
+    .faq-answer {
+        padding: 10px;
+        font-size: 12px;
+        padding-left: 2rem;
+    }
+    .faq-question {
+      align-items: flex-start;
+        padding: 6px;
+    }
+    .footer-wrap {
+     
+display: flex;
+     
+flex-direction: row;
+     
+padding: 0 1.3rem;
+     
+flex-wrap: wrap;
+    }
+    .footer-wrap > div {
+   
+gap: 22px;
+   
+padding-top: 1rem;
+   
+padding-bottom: 1rem;
+   
+}
+.footer_menu_links{
+    width: 45%;
+}
+
+footer#footer {
+    padding: 3rem 1rem;
+}
+
+.copyright div{
+    display: none;
+}
+.copyright_repeat.footer_menu_links {
+    padding-top: 3.5rem;
+    display: block;
+}
+
+.copyright {
+ 
+    padding-bottom: 3rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+#footer .trial_button button {
+    padding: .6rem 1.5rem;
+}
+
+ul.social_links li a{
+    width: 38px;
+    height: 38px;
+}
+ul.social_links li a svg{
+    width: 21px;
+ 
+}
 }
