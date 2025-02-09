@@ -39,7 +39,7 @@ text-align: center;
    
 
   
-    .pricing,
+    
     .range_pricing,
     #startFreeTrial,
     #faq,
@@ -88,8 +88,47 @@ width:50px;
     flex-direction: column;
     padding: 1rem;
 }
+p.total_event_pill {
+    background: rgb(223, 255, 233);
+    /* padding: 5px 5px 5px .5rem; */
+    border-radius: 50px;
+    line-height: 15px;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+}
+
+p.sale_recovered{
+    font-size: 11px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+.events_tab_main {
+
+    padding: 6px;
+}
+
+p.sale_recovered span {
+  
+    padding: 5px 7px;
+    margin-left: 3px;
+    font-size: 12px;
+}
+
+
+p.total_event_pill span {
+ 
+    margin-left: 6px;
+}
 
 }
+
+
+
+
+
+
 
 
 @media (max-width: 768px) {
@@ -223,7 +262,8 @@ padding: .8rem 1rem 4rem;
      }
 
      .event_box_top ul li {
-        font-size: 12px;
+        font-size: 11px;
+        line-height: 15px;
     }
     .title_and_icon h4 {
         font-size: .8rem;
@@ -288,5 +328,35 @@ padding: .8rem 1rem 4rem;
       
         gap: 3px;
         margin-top: 1.5rem;
+    }
+    .event_box_top {
+        width: 298px;
+     
+    }
+    .pricing .container{
+        padding: 2rem;
+        margin: 0 .8rem;
+    }
+
+    .pricing .pricing_wrap {
+      
+        flex-direction: column;
+    }
+    .pricing .content_wrap {
+        width: 100%;
+    }
+
+    .pricing .card {
+        padding: 1rem 1.5rem;
+        width: 100%;
+       
+    }
+
+    .pricing .cta-button {
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    .pricing_wrap .content_wrap h2 {
+        margin-bottom: 1rem;
     }
 }
