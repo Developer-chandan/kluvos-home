@@ -83,6 +83,10 @@ button {
 .btn:hover {
     background-color: rgb(69, 132, 89);
 }
+
+.mobile_menu{
+    display: none;
+}
 .menu_links ul li a {
     color: white;
 }
@@ -92,6 +96,23 @@ button {
     padding-top: 38px;
     height: 100vh;
 }
+
+
+
+.landing_page_nav_wrap.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: var(--secondary);
+    padding: 1.5rem;
+    transition: all .2s ease-in;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+  
 
 .app_showcase_left h5 {
     font-size: 1rem;
@@ -143,6 +164,8 @@ button {
 .landing_page_nav_wrap {
     display: flex;
     align-items: center;
+    transition: all .2s ease-in-out;
+
 }
 
 .logo {
@@ -883,134 +906,103 @@ section#pricing {
  display: inline;
 }
 
-
-.range_pricing .container {
-    max-width: 820px;
-    margin: auto;
-}
-.range_pricing .pricing-box {
-    background: #ffffff00;
-    /* padding: 4rem; */
-    border-radius: 10px;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-    margin-top: 20px;
-    border: 1px solid #ddd;
-}
-.range_pricing .slider-container {
-    position: relative;
-    /* margin: 19px 0; */
-    height: 167px;
+/* range slider start  */
+.pricing_slider_wrap{
     display: flex;
     justify-content: center;
-    align-content: flex-start;
-    flex-wrap: wrap;
-    padding-top: 1rem;
-}
-.range_pricing input[type=range] {
-    width: 100%;
-    margin: auto;
-    display: inline-block;
-    /* display: block; */
-}
-.range_pricing .tooltip {
-    position: absolute;
-    top: 47px;
-    left: 17px;
-    /* transform: translateX(-50%); */
-    background: white;
-    /* padding: 10px; */
-    border-radius: 5px;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-    font-weight: bold;
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    z-index: 999;
+    max-width: 850px;
+    margin: auto;
+    border: 1px solid #ddd;
+    padding: 2rem;
+    border-radius: 11px;
+}
+.custom-slider-container {
+    position: relative;
+    max-width: 750px;
+    margin: 50px;
     background: white;
-    border: 1px solid var(--primary);
-}
-.range_pricing .yearly-price {
-    /* background: #e5f8e5; */
-    /* padding: 7px; */
-    padding-top: 5px;
-    border-radius: 5px;
-    /* font-weight: bold; */
-    color: var(--primary);
-    font-size: 13px;
-    font-weight: 400;
-}
-.range_pricing .monthly-price {
-    background: #deffe8;
-    padding: 5px 15px;
-    border-radius: 5px;
-    font-weight: 400;
-    margin-top: 5px;
-    font-size: 14px;
-}
-.range_pricing .footer-text {
-    margin-top: 3rem;
-    /* font-size: 14px; */
-    text-align: center;
-}
-.range_pricing .footer-text strong {
-    font-weight: 500;
+    padding: 1rem 2rem;
+    border-radius: 6px;
 }
 
-
-.range_title{
-    text-align: center;
-    margin-bottom: 2.5rem;
-}
-
-.pricing-box p {
-    padding-left: 4rem;
-    padding-top: 4rem;
-}
-
-#tooltipMonthlyPrice strong{
-    color: var(--primary);
-    font-weight: 500;
-}
-
-
-input[type=range] {
+.custom-slider {
     -webkit-appearance: none;
     width: 100%;
-    height: 8px;
-    background: var(--primary);
-    border-radius: 5px;
+    height: 6px;
+    border-radius: 10px;
     outline: none;
-    opacity: 0.9;
-    transition: all .6s;
-    position: relative;
+    background: linear-gradient(to right, var(--text) 50%, var(--primary) 50%);
 }
-input[type=range]::-webkit-slider-runnable-track {
-    height: 8px;
-    background: linear-gradient(to right, var(--text) 0%, var(--text) var(--progress), var(--primary) var(--progress), var(--primary) 100%);
-    border-radius: 5px;
-}
-input[type=range]::-moz-range-track {
-    height: 8px;
-    background: linear-gradient(to right, var(--text) 0%, var(--text) var(--progress), var(--primary) var(--progress), var(--primary) 100%);
-    border-radius: 5px;
-}
-input[type=range]::-webkit-slider-thumb {
+
+.custom-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 20px;
     height: 20px;
-    background: green;
     border-radius: 50%;
+    background: var(--primary);
     cursor: pointer;
-    margin-top: -6px;
+    position: relative;
 }
-input[type=range]::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    background: green;
-    border-radius: 50%;
-    cursor: pointer;
+
+.tooltip {
+    position: absolute;
+    background: #fff;
+    /* padding: 6px 10px; */
+    border: 1px solid var(--primary);
+    border-radius: 6px;
+    top: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 14px;
+    text-align: center;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
 }
+
+.yearly {
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.monthly {
+    color: var(--text);
+    font-size: 13px;
+    background: #e2ffeb;
+    padding: 3px 10px;
+}
+
+
+.range_title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.annual_sales{
+    padding-left: 3rem;
+}
+
+section.range_pricing .footer-text {
+    max-width: 850px;
+    text-align: center;
+    margin: auto;
+    padding-top: 3rem;
+}
+
+section.range_pricing .footer-text strong {
+    font-weight: 500;
+}
+
+/* range slider end */
+
+
+
+
+
 
 section#exp_pricing {
     background: #f8fcf9;

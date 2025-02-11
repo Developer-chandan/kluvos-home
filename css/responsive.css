@@ -1,5 +1,292 @@
-@media (max-width: 668px){
+
+
+
+
+@media (max-width: 1120px){
+    section#un_truth {
+        margin-top: -3rem;
+      
+    }
+
+    .tab-button {
+        padding: 7px 14px;
+    
+        font-size: 14px;
+       
+    }
+
+    .tab_content_wrap {
+        display: flex;
+        gap: 57px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cross_arrow_sign, .right_arrow_sign {
+        width: 27px;
+        height: 19px;
+        right: 50%;
+        top: 237px;
+        transform: rotate(90deg);
+    }
+
+    .tab-content {
+      
+padding-top: 0rem;
+    }
+
+    .event_box_top {
+        
+height: 137px;
+        
+padding: .8rem 1rem 4rem;
+    }
   
+     .right_arrow_sign svg{
+        /* font-size: 9px; */
+        width: 13px;
+     }
+
+     .event_box_top ul li {
+        font-size: 12px;
+        line-height: 17px;
+    }
+    .title_and_icon h4 {
+        font-size: 1rem;
+    }
+
+    .info_wrap {
+ 
+padding: .5rem .5rem 2rem;
+ 
+margin-top: -1.6rem;
+ 
+width: 300px;
+}
+
+    .event-box.red .cross_arrow_sign {
+        position: absolute;
+        left: 19px;
+        top: -42px;
+        width: 28px;
+    }
+
+    .cookies_deleted span {
+        width: 53px;
+        height: 0;
+        top: -34px;
+        left: 51px;
+    }
+
+
+    .cookies_deleted p {
+        position: absolute;
+        top: -43px;
+        left: 118px;
+       
+    }
+
+    .event-box.red .cross_arrow_sign svg {
+        color: white;
+        width: 18px;
+    }
+
+    span.border_icon svg {
+        position: absolute;
+        left: 52px;
+        top: -8.5px;
+    }
+
+    .tabs {
+  
+        margin-bottom: 24px;
+      
+    }
+
+    section#un_truth {
+       
+        padding: 3rem 0;
+    }
+    .events_tab_main {
+     
+        margin-top: 1rem;
+    }
+
+    .events_summery {
+      
+        gap: 3px;
+        margin-top: 1.5rem;
+    }
+    .event_box_top {
+        width: 350px;
+     
+    }
+
+    .user_info span, .user_info p {
+        font-size: 10px;
+        line-height: 16px;
+    }
+    .t_header p::before {
+      
+        width: 159px;
+       
+    }
+
+    .t_header p::after {
+        
+        width: 160px;
+        
+    }
+
+    .landing_page_nav_wrap.sticky {
+      
+        padding: 1.5rem 5%;
+    }
+}
+
+
+
+@media (max-width: 780px) {
+
+    a, p, button, span, ul, li{
+        font-size: .9rem;
+        line-height: 18px;
+    }
+    h2{
+        font-size: 2rem;
+    }
+
+    /* mobile  menu  */
+    .menu_links {
+        display: none;
+    }
+    .mobile_menu{
+        display: block;
+    }
+    button.mobile_login_btn ,
+    button.mobile_signup_btn {
+        background: var(--primary);
+        color: white;
+        padding: .4rem 1.5rem;
+        border-radius: 26px;
+        text-transform: capitalize;
+    }
+
+
+    button.mobile_login_btn{
+        background: var(--secondary);
+        font-size: 1rem;
+        padding: .6rem 1.8rem;
+    }
+
+
+    button.mobile_login_btn:hover ,
+    button.mobile_signup_btn:hover {
+       background: var(--secondary);
+       color: var(--primary);
+    }
+
+
+    .landing_page_nav_wrap {
+        display: flex
+    ;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    button.menu_menu_icon img {
+        width: 25px;
+    }
+    
+    button.menu_menu_icon {
+        display: grid;
+        align-items: center;
+    }
+    .mobile_menu_links {
+        width: 100%;
+        background: var(--primary);
+        position: absolute;
+        left: 0;
+        text-align: center;
+        padding: 5rem 2rem;
+        top: 0;
+        padding-bottom: 3rem;
+    }
+
+    .mobile_menu_links ul li a {
+        padding: .8rem 0;
+        display: inline-block;
+        font-size: 1rem;
+        color: white;
+    }
+    .mobile_menu_links .cross_icon svg {
+        width: 39px;
+        height: 42px;
+        color: var(--secondary);
+        position: absolute;
+        top: 28px;
+        right: 26px;
+    }
+
+    .signupbutton {
+        display: flex;
+        gap: 15px;
+    }
+
+.mobile_menu_links{
+    display: none;
+}
+
+
+.mobile_menu_links ul.social_links {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 11px;
+}
+
+.mobile_menu_links ul.social_links li a{
+    display: grid;
+    /* place-items: center; */
+    width: 30px;
+    height: 30px;
+    background: none;
+    align-items: center;
+}
+.mobile_menu_links ul.social_links li a svg{
+    width: 21px;
+    color: black;
+}
+
+
+.landing_page_nav_wrap.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: var(--secondary);
+    padding: 1.5rem;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+
+
+  /* mobile  menu end */
+
+    .logo {
+        max-width: 146px;
+    }
+    
+    .user_menu {
+        display: none;
+    }
+
+    
     .app_showcase_left {
         max-width: 96%;
     }
@@ -16,7 +303,8 @@ text-align: center;
         font-size: .8rem;
     }
     .app_showcase_left h1{
-        font-size: 32px;
+        font-size: 46px;
+        max-width: 400px;
     }
     .app_showcase_left p {
         max-width: 70%;
@@ -30,10 +318,10 @@ text-align: center;
     
         justify-content: flex-start;
     }
-    .landing_page_nav_wrap {
+    /* .landing_page_nav_wrap {
      
         display: none;
-    }
+    } */
 
   
  
@@ -42,162 +330,24 @@ text-align: center;
         height: 100vh;
     }
 
-.slide{
-padding: 0 1rem;
-}
 
-.slide img{
-width:50px;
-}
-
-.slider_extra_color{
-    padding: 1.5rem 0;
-}
-
-.slider_wrapper{
-    padding: 0;
-}
-
-.t_header p::after {
-  
-    width: 80px;
-    top: 13px;
-    left: 148px;
-}
-
-.t_header p::before {
-    width: 88px;
-    top: 13px;
-    right: 148px;
-}
-
-.feature-cards-container {
-
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-}
-p.total_event_pill {
-    background: rgb(223, 255, 233);
-    /* padding: 5px 5px 5px .5rem; */
-    border-radius: 50px;
-    line-height: 15px;
-    font-size: 11px;
-    display: flex;
-    align-items: center;
-}
-
-p.sale_recovered{
-    font-size: 11px;
-    display: flex;
-    align-content: center;
-    align-items: center;
-}
-.events_tab_main {
-
-    padding: 6px;
-}
-
-p.sale_recovered span {
-  
-    padding: 5px 7px;
-    margin-left: 3px;
-    font-size: 12px;
-}
-
-
-p.total_event_pill span {
- 
-    margin-left: 6px;
-}
-.pricing .container p {
-    font-size: 11px;
-    line-height: 15px;
-}
-
-.pricing .cta-button {
- 
-    padding: 8px 26px;
-    font-size: 12px;
-   
-}
-
-.pricing .container h4 {
-    font-size: 1rem;
-    margin: 0.5rem 0;
-    margin-top: 0;
-}
-section.range_pricing {
-    padding: 4rem 1rem;
-}
-
-.range_pricing .pricing-box{
-    border: none;
-    margin-top: 0;
-}
-
-
-.range_title {
-    margin-bottom: 0.5rem;
-}
-.range_pricing .footer-text {
-    margin-top: 0rem;
-}
-.freeTrialWrap h2 {
-    font-size: 1.6rem;
-    margin: 1rem 0;
-}
-
-.freeTrialWrap {
-    text-align: center;
-    background: url(../img/Kluvos-icon-dark.png);
-    background-repeat: no-repeat;
-    padding: 4rem 0;
-    background-size: 537px;
-    background-position: center bottom;
-}
-.promotion_wrap h4 sup {
-    font-size: 2rem;
-}
-.promotion_wrap h4 {
-    font-size: 3.5rem;
- 
-}
-.promotion_wrap {
-    padding: 4rem 0;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-.promotion_content_box {
-    max-width: 48.33%;
-    padding: 1rem;
-}
-
-.promotion_content_box p {
-
-    font-size: .9rem;
-}
-
-}
+    .slide{
+        padding: 0 1rem;
+        }
+        
+        .slide img{
+        width:50px;
+        }
+        
+        .slider_wrapper{
+            padding-top: 0;
+        }
 
 
 
 
 
 
-
-
-@media (max-width: 768px) {
-
-    a, p, button, span, ul, li{
-        font-size: .8rem;
-        line-height: 18px;
-    }
-    h2{
-        font-size: 1.8rem;
-    }
     .t_boxes {
         display: flex;
         overflow-x: auto;
@@ -209,7 +359,7 @@ section.range_pricing {
     }
 
     .testimonial-card {
-        max-width: 70%; /* Each card takes most of the viewport width */
+        max-width: 47%; /* Each card takes most of the viewport width */
         scroll-snap-align: start;
         flex-shrink: 0;
         padding: 1.5rem;
@@ -301,15 +451,22 @@ section.range_pricing {
         top: 231px;
         transform: rotate(90deg);
     }
-
+    .monthly {
+        font-size: 11px;
+        padding: 4px 11px;
+    }
+    .yearly {
+        font-size: 11px;
+        padding: .4rem;
+    }
     .tab-content {
       
-        padding-top: 1rem;
+padding-top: 0rem;
     }
 
     .event_box_top {
         
-height: 142px;
+height: 137px;
         
 padding: .8rem 1rem 4rem;
     }
@@ -320,7 +477,7 @@ padding: .8rem 1rem 4rem;
      }
 
      .event_box_top ul li {
-        font-size: 11px;
+        font-size: 10px;
         line-height: 15px;
     }
     .title_and_icon h4 {
@@ -329,10 +486,11 @@ padding: .8rem 1rem 4rem;
 
     .info_wrap {
  
-        padding: .8rem .8rem 2rem;
-      
-        margin-top: -2.5rem;
-    }
+padding: .5rem .5rem 2rem;
+ 
+margin-top: -2.5rem;
+ 
+}
 
     .event-box.red .cross_arrow_sign {
         position: absolute;
@@ -501,4 +659,242 @@ ul.social_links li a svg{
     width: 21px;
  
 }
+
+.range_pricing .footer-text strong {
+    font-weight: 600;
+}
+
+.feature-cards-container {
+   
+    padding: 1rem;
+}
+
+
+}
+
+
+@media (max-width: 668px){
+  
+    a, p, button, span, ul, li{
+        font-size: .8rem;
+        line-height: 18px;
+    }
+    h2{
+        font-size: 1.8rem;
+    }
+
+    .app_showcase_left h1{
+        font-size: 32px;
+    }
+
+.slide{
+padding: 0 1rem;
+}
+
+.slide img{
+width:50px;
+}
+
+.slider_extra_color{
+    padding: 1.5rem 0;
+}
+
+.slider_wrapper{
+    padding: 0;
+}
+
+.t_header p::after {
+  
+    width: 80px;
+    top: 13px;
+    left: 148px;
+}
+
+.t_header p::before {
+    width: 88px;
+    top: 13px;
+    right: 148px;
+}
+
+.feature-cards-container {
+
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+p.total_event_pill {
+    background: rgb(223, 255, 233);
+    /* padding: 5px 5px 5px .5rem; */
+    border-radius: 50px;
+    line-height: 15px;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+}
+
+p.sale_recovered{
+    font-size: 11px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+.events_tab_main {
+
+    padding: 6px;
+}
+
+p.sale_recovered span {
+  
+    padding: 5px 7px;
+    margin-left: 3px;
+    font-size: 12px;
+}
+
+
+p.total_event_pill span {
+ 
+    margin-left: 6px;
+}
+.pricing .container p {
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.pricing .cta-button {
+ 
+    padding: 8px 26px;
+    font-size: 12px;
+   
+}
+
+.pricing .container h4 {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    margin-top: 0;
+}
+section.range_pricing {
+    padding: 4rem 1rem;
+}
+
+.range_pricing .pricing-box{
+    border: none;
+    margin-top: 0;
+}
+
+
+.range_title {
+    margin-bottom: 0.5rem;
+}
+.range_pricing .footer-text {
+    margin-top: 0rem;
+}
+.freeTrialWrap h2 {
+    font-size: 1.6rem;
+    margin: 1rem 0;
+}
+
+.freeTrialWrap {
+    text-align: center;
+    background: url(../img/Kluvos-icon-dark.png);
+    background-repeat: no-repeat;
+    padding: 4rem 0;
+    background-size: 537px;
+    background-position: center bottom;
+}
+.promotion_wrap h4 sup {
+    font-size: 2rem;
+}
+.promotion_wrap h4 {
+    font-size: 3.5rem;
+ 
+}
+.promotion_wrap {
+    padding: 4rem 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.promotion_content_box {
+    max-width: 48.33%;
+    padding: 1rem;
+}
+
+.promotion_content_box p {
+
+    font-size: .9rem;
+}
+
+.day_pill span {
+    padding: 0.1rem 1rem;
+    font-size: 11px;
+}
+.day_pill {
+    margin-top: -12px;
+}
+
+
+.user_info span, .user_info p {
+    font-size: 9px;
+    line-height: 14px;
+}
+.tab_content_wrap {
+    display: flex;
+    gap: 39px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.info_wrap {
+    padding: .5rem .5rem 1.3rem;
+}
+
+.cross_arrow_sign, .right_arrow_sign {
+    top: 191px;
+}
+
+.event-box.red .cross_arrow_sign {
+    position: absolute;
+    left: 19px;
+    top: -33px;
+    width: 28px;
+}
+
+.cookies_deleted p {
+    top: -32px;
+}
+
+.cookies_deleted span {
+   
+    top: -23px;
+}
+.info_wrap {
+    width: 222px;
+ 
+}
+
+.testimonial-card {
+    max-width: 80%; /* Each card takes most of the viewport width */
+ 
+}
+
+.pricing_slider_wrap{
+   
+    margin: auto;
+    border: 1px solid #ddd;
+}
+.custom-slider-container {
+    margin: 16px;
+}
+
+.pricing_slider_wrap {
+   
+padding: 2rem .5rem;
+   
+padding-bottom: 5rem;
+}
+
+
+
+
 }

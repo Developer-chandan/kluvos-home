@@ -35,6 +35,61 @@
                             </li>
                         </ul>
                     </div>
+                    <!-- mobile menu  -->
+                    <div class="mobile_menu">
+                        <div class="signupbutton">
+                            <button type="button" class="mobile_signup_btn">Sign Up</button>
+                            <button type="button" class="menu_menu_icon">
+                                <img src="img/menu.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="mobile_menu_links">
+                            <div>
+                                <button class="cross_icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                                      </svg>
+                                </button>
+                            </div>
+                            <ul>
+                                <li><a href="#">Pricing</a></li>
+                                <li><a href="#">feature</a></li>
+                                <li><a href="#">FAQ</a></li>
+                            </ul>
+                            <div> <button type="button" class="mobile_login_btn">Sign In</button></div>
+                            <ul class="social_links">
+                                <li><a href="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" class="lucide lucide-facebook">
+                                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                                        </svg>
+                                    </a></li>
+                                <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin">
+                                            <path
+                                                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                            <rect width="4" height="12" x="2" y="9" />
+                                            <circle cx="4" cy="4" r="2" />
+                                        </svg></a></li>
+        
+                                <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram">
+                                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                                        </svg></a></li>
+                                <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                                        </svg></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </nav>
                 <div class="app_showcase_wrap">
                     <div class="app_showcase">
@@ -642,25 +697,21 @@
                 <p>No credit card. No commitment.<br>Following a 30 day free trial, monthly pricing is based off of
                     annual revenue.</p>
             </div>
-
-            <div class="pricing-box">
-                <p>Annual Sales:</p>
-                <div class="range_box_wrap">
-                    <div class="slider-container">
-                        <div class="tooltip" id="tooltip">
-                            <span class="yearly-price" id="yearlyPrice">$210,000 / year</span>
-                            <span class="monthly-price" id="tooltipMonthlyPrice">Monthly Price: <strong> $199</strong>
-                            </span>
-                        </div>
-                        <div class="range_input_wrapper">
-                            <input type="range" id="salesSlider" min="50000" max="1000000" step="10000" value="210000"
-                                oninput="updatePricing()">
-                        </div>
+            <div class="pricing_slider_wrap">
+                <p class="annual_sales">Annual Sales:</p>
+                <div class="custom-slider-container">
+                    
+                    <div class="tooltip" id="tooltip">
+                        <span class="yearly" id="yearly">$290,000 / year</span>
+                        <span class="monthly" id="monthly">Monthly Price: $290</span>
                     </div>
+                    <input type="range" min="0" max="100" value="50" class="custom-slider" id="customSlider">
                 </div>
-
-
             </div>
+           
+    
+
+
 
             <p class="footer-text">Kluvos will add a significant amount of revenue through email each month. <strong>We
                     guarantee a 30% lift in both browse abandonment and cart abandonment flows.</strong></p>
@@ -1023,6 +1074,57 @@
     </footer>
     <script>
 
+// -------------------------------------------------------------
+// mobile menu toggle 
+//--------------------------------------------------------------
+// Function to toggle mobile menu visibility
+function toggleMobileMenu() {
+  const mobileMenu = document.querySelector('.mobile_menu_links');
+  const menuIcon = document.querySelector('.menu_menu_icon');
+  const crossIcon = document.querySelector('.cross_icon');
+
+  // Toggle the display of the mobile menu
+  if (mobileMenu.style.display === 'block') {
+    mobileMenu.style.display = 'none';
+  } else {
+    mobileMenu.style.display = 'block';
+  }
+
+  // Toggle the visibility of the cross icon and menu icon
+  crossIcon.style.display = mobileMenu.style.display === 'block' ? 'block' : 'none';
+  menuIcon.style.display = mobileMenu.style.display === 'grid' ? 'none' : 'grid';
+}
+
+// Add event listener to hamburger menu icon
+document.querySelector('.menu_menu_icon').addEventListener('click', toggleMobileMenu);
+
+// Add event listener to close icon (cross icon)
+document.querySelector('.cross_icon').addEventListener('click', toggleMobileMenu);
+
+
+
+// ---------------------------------------------------
+// sticky header 
+//-------------------------------------------------------
+// Function to add sticky class to the header when scrolling
+function handleScroll() {
+  const header = document.querySelector('.landing_page_nav_wrap');
+  
+  // Check if the page has been scrolled more than 30px
+  if (window.scrollY > 30) {
+    header.classList.add('sticky');
+  } else {
+    header.classList.remove('sticky');
+  }
+}
+
+
+//---------------------------------------------------
+// logo slider 
+//---------------------------------------------------
+// Event listener for scroll event
+window.addEventListener('scroll', handleScroll);
+
         // logo slider start
         const slider = document.getElementById('slider');
         let slides = document.querySelectorAll('.slide');
@@ -1052,7 +1154,8 @@
         duplicateSlides();
         setInterval(moveSlide, 3000);
 
-        // logo slider start
+    //---------------------------------------------------
+    
         // events tabs  start
 
         function openTab(evt, tabName) {
@@ -1068,31 +1171,42 @@
             document.getElementById(tabName).classList.add("active");
             evt.currentTarget.classList.add("active");
         }
+ // events tabs  end
 
-
-        // events tabs  end
-
+//---------------------------------------------------
 
         // pricing range update 
+        
+        const customSlider = document.getElementById("customSlider");
+    const tooltip = document.getElementById("tooltip");
+    const yearly = document.getElementById("yearly");
+    const monthly = document.getElementById("monthly");
 
-        function updatePricing() {
-            let slider = document.getElementById("salesSlider");
-            let yearlyPrice = document.getElementById("yearlyPrice");
-            let tooltipMonthlyPrice = document.getElementById("tooltipMonthlyPrice");
-            let priceBox = document.getElementById("monthlyPrice");
+    function updateSlider() {
+        const value = customSlider.value;
+        const percent = (value - customSlider.min) / (customSlider.max - customSlider.min) * 100;
+        
+        // Update slider background fill
+        customSlider.style.background = `linear-gradient(to right, var(--text) ${percent}%, var(--primary) ${percent}%)`;
+        
+        // Update tooltip position
+        const offset = customSlider.offsetWidth * percent / 100 - tooltip.offsetWidth / 6 + 20;
+        tooltip.style.left = `${offset}px`;
+        
+        // Calculate yearly and monthly values (Example: Adjust as needed)
+        const yearlyAmount = value * 5800;
+        const monthlyAmount = Math.round(yearlyAmount / 12);
 
-            let salesValue = parseInt(slider.value).toLocaleString();
-            let monthlyPrice = Math.max(199, Math.round(slider.value / 1000));
+        // Update tooltip text
+        yearly.textContent = `$${yearlyAmount.toLocaleString()} / year`;
+        monthly.textContent = `Monthly Price: $${monthlyAmount}`;
+    }
 
-            yearlyPrice.textContent = `$${salesValue} / year`;
-            tooltipMonthlyPrice.textContent = `Monthly Price: $${monthlyPrice}`;
-            //  priceBox.textContent = `Monthly Price: $${monthlyPrice}`;
-
-            let percent = (slider.value - slider.min) / (slider.max - slider.min) * 100;
-            document.getElementById("tooltip").style.left = `calc(${percent}% - 20px)`;
-            slider.style.setProperty("--progress", `${percent}%`);
-        }
-
+    customSlider.addEventListener("input", updateSlider);
+    updateSlider(); // Initialize position on load
+   
+     
+//---------------------------------------------------
 
 
         // accordion icon 
@@ -1119,6 +1233,11 @@
                 }
             });
         });
+
+
+
+
+        
     </script>
 
 </body>
