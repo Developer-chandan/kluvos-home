@@ -1103,7 +1103,38 @@ document.querySelector('.menu_menu_icon').addEventListener('click', toggleMobile
 
 // Add event listener to close icon (cross icon)
 document.querySelector('.cross_icon').addEventListener('click', toggleMobileMenu);
+// -----------------------------------------------------------------------
+// Function to close the mobile menu and scroll to the target section
+function handleMenuLinkClick(event) {
+  const mobileMenu = document.querySelector('.mobile_menu_links');
+  const menuIcon = document.querySelector('.menu_menu_icon');
+  const crossIcon = document.querySelector('.cross_icon');
+  
+  // Close the mobile menu
+  mobileMenu.style.display = 'none';
 
+  // Optionally toggle the visibility of the menu icon and cross icon
+  crossIcon.style.display = 'none';
+  menuIcon.style.display = 'block';
+
+  // Scroll to the target section (smooth scroll)
+  const targetId = event.target.getAttribute('href'); // Get the href value (e.g., #section1)
+  if (targetId && targetId.startsWith('#')) {
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth', // Smooth scrolling effect
+        block: 'start' // Aligns the top of the target element to the top of the viewport
+      });
+    }
+  }
+}
+
+// Attach click event listeners to all menu links
+const menuLinks = document.querySelectorAll('.mobile_menu_links a');
+menuLinks.forEach(link => {
+  link.addEventListener('click', handleMenuLinkClick);
+});
 
 
 // ---------------------------------------------------
