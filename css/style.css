@@ -1302,6 +1302,27 @@ ul.social_links li a {
 .copyright_repeat.footer_menu_links {
     display: none;
 }
+
+section#exp_pricing{
+    position: relative;
+    }
+    
+    section#exp_pricing:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 25%;
+        background: white;
+        z-index: 10;
+    }
+    
+    .pricing .container {
+        z-index: 999;
+    }
+    
+
+
 @media (max-width: 1140px) {
     .landing_page_header{
         height: 800px;
