@@ -135,6 +135,10 @@
                     <div class="slide"><img src="img/adobe-commerce-1024x512-20220218.png" alt="Logo 1"></div>
                     <div class="slide"><img src="img/amazon_PNG6.png" alt="Logo 1"></div>
                     <div class="slide"><img src="img/Google-Analytics-logo.png" alt="Logo 1"></div>
+                    <div class="slide"><img src="img/shopify-plus.png" alt="Logo 1"></div>
+                    <div class="slide"><img src="img/amazon_PNG6.png" alt="Logo 1"></div>
+
+                  
                     
                     <!-- 
                     <div class="slide"><img src="img/Meta-Logo-PNG-File.png" alt="Logo 1"></div>
@@ -1158,37 +1162,54 @@ function handleScroll() {
 //---------------------------------------------------
 // logo slider 
 //---------------------------------------------------
-// Event listener for scroll event
-const slider = document.getElementById('slider');
-let slides = document.querySelectorAll('.slide');
+const slider = document.getElementById("slider");
+let slides = document.querySelectorAll(".slide");
 let index = 0;
-function duplicateSlides(times = 3) {
-    let originalSlides = slider.innerHTML;
+let slideWidth;
+
+// Clone slides 20 times for a long seamless scroll
+function cloneSlides(times = 20) {
+    let originalSlides = Array.from(slides);
     for (let i = 0; i < times; i++) {
-        slider.innerHTML += originalSlides;
+        originalSlides.forEach((slide) => {
+            let clone = slide.cloneNode(true);
+            slider.appendChild(clone);
+        });
     }
-    slides = document.querySelectorAll('.slide'); // Update the slide references
+    slides = document.querySelectorAll(".slide"); // Update slide references
 }
 
-// Move the slide continuously
+// Update slide width dynamically
+function updateSlideWidth() {
+    slides = document.querySelectorAll(".slide"); // Refresh list
+    slideWidth = slides[0].offsetWidth;
+}
+
+// Move the slider continuously
 function moveSlide() {
-    const slideWidth = slides[0].offsetWidth; // Update slide width dynamically
+    updateSlideWidth(); // Ensure proper spacing
     index++;
-    slider.style.transition = 'transform 0.5s linear';
+    slider.style.transition = "transform 0.5s linear";
     slider.style.transform = `translateX(${-index * slideWidth}px)`;
 
-    if (index >= slides.length / 2) {
+    // Smooth reset off-screen before user notices
+    if (index >= slides.length - 6) {
         setTimeout(() => {
-            slider.style.transition = 'none'; // Remove transition for smooth reset
+            slider.style.transition = "none"; // Remove transition for instant reset
             index = 0;
-            slider.style.transform = `translateX(0px)`;
+            slider.style.transform = `translateX(${-index * slideWidth}px)`; // Reset off-screen
         }, 500);
     }
 }
 
 // Initialize slider
-duplicateSlides(4); // Duplicate the slides 4 times for a continuous effect
+cloneSlides(20); // Clone 20 times to avoid whitespace on mobile
+updateSlideWidth();
 setInterval(moveSlide, 3000);
+
+// Handle resizing
+window.addEventListener("resize", updateSlideWidth);
+
     //---------------------------------------------------
     
         // events tabs  start
