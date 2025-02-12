@@ -135,13 +135,15 @@
                     <div class="slide"><img src="img/adobe-commerce-1024x512-20220218.png" alt="Logo 1"></div>
                     <div class="slide"><img src="img/amazon_PNG6.png" alt="Logo 1"></div>
                     <div class="slide"><img src="img/Google-Analytics-logo.png" alt="Logo 1"></div>
+                    
+                    <!-- 
                     <div class="slide"><img src="img/Meta-Logo-PNG-File.png" alt="Logo 1"></div>
                     <div class="slide"><img
                             src="img/purepng.com-ebay-logologobrand-logoiconslogos-251519938326w1a5t.png" alt="Logo 1">
                     </div>
                     <div class="slide"><img src="img/adobe-commerce-1024x512-20220218.png" alt="Logo 1"></div>
                     <div class="slide"><img src="img/amazon_PNG6.png" alt="Logo 1"></div>
-                    <div class="slide"><img src="img/Google-Analytics-logo.png" alt="Logo 1"></div>
+                    <div class="slide"><img src="img/Google-Analytics-logo.png" alt="Logo 1"></div> -->
 
                 </div>
                 <button class="next" onclick="moveSlide(1)">
@@ -1157,37 +1159,36 @@ function handleScroll() {
 // logo slider 
 //---------------------------------------------------
 // Event listener for scroll event
-window.addEventListener('scroll', handleScroll);
+const slider = document.getElementById('slider');
+let slides = document.querySelectorAll('.slide');
+let index = 0;
+function duplicateSlides(times = 3) {
+    let originalSlides = slider.innerHTML;
+    for (let i = 0; i < times; i++) {
+        slider.innerHTML += originalSlides;
+    }
+    slides = document.querySelectorAll('.slide'); // Update the slide references
+}
 
-        // logo slider start
-        const slider = document.getElementById('slider');
-        let slides = document.querySelectorAll('.slide');
-        let index = 0;
+// Move the slide continuously
+function moveSlide() {
+    const slideWidth = slides[0].offsetWidth; // Update slide width dynamically
+    index++;
+    slider.style.transition = 'transform 0.5s linear';
+    slider.style.transform = `translateX(${-index * slideWidth}px)`;
 
-        function duplicateSlides() {
-            slider.innerHTML += slider.innerHTML; // Duplicate the slides
-            slides = document.querySelectorAll('.slide'); // Re-select slides after duplication
-        }
+    if (index >= slides.length / 2) {
+        setTimeout(() => {
+            slider.style.transition = 'none'; // Remove transition for smooth reset
+            index = 0;
+            slider.style.transform = `translateX(0px)`;
+        }, 500);
+    }
+}
 
-        function moveSlide() {
-            const slideWidth = slides[0].offsetWidth; // Update slide width dynamically
-            index++;
-            slider.style.transition = 'transform 0.5s linear';
-            slider.style.transform = `translateX(${-index * slideWidth}px)`;
-
-            if (index >= slides.length / 2) {
-                setTimeout(() => {
-                    slider.style.transition = 'none'; // Remove transition for smooth reset
-                    index = 0;
-                    slider.style.transform = `translateX(0px)`;
-                }, 500);
-            }
-        }
-
-        // Initialize slider
-        duplicateSlides();
-        setInterval(moveSlide, 3000);
-
+// Initialize slider
+duplicateSlides(4); // Duplicate the slides 4 times for a continuous effect
+setInterval(moveSlide, 3000);
     //---------------------------------------------------
     
         // events tabs  start
